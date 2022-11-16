@@ -2,9 +2,9 @@ spring:
   application:
     name: EUREKA-SERVER
   security:
-  user:
-    name: grkem
-    password: 1234
+    user:
+      name: grkem
+      password: 1234
   zipkin:
     base-url: http://localhost:9411
 
