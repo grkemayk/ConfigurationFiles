@@ -1,0 +1,73 @@
+server:
+  port: 8002
+
+spring:
+  main:
+    web-application-type: reactive
+  application:
+    name: GATEWAY-SERVER
+  cloud:
+    gateway:
+      routes:
+        - id: authServer
+          uri: lb://AUTH-SERVER
+          predicates:
+            - Path=/auth/**
+          filters:
+            - RewritePath=/(?<segment>.*), /$\{segment}
+            - name: CircuitBreaker
+              args:
+                name: fallbackAuth
+                fallbackUri: forward:/fallbackAuthServer
+        - id: userDetailService
+          uri: lb://USER-DETAIL
+          predicates:
+            - Path=/userDetail/**
+          filters:
+            - RewritePath=/(?<segment>.*), /$\{segment}
+            - name: CircuitBreaker
+              args:
+                name: fallbackUser
+                fallbackUri: forward:/fallbackUserDetailService
+        - id: eventService
+          uri: lb://EVENT-SERVICE
+          predicates:
+            - Path=/event/**
+          filters:
+            - RewritePath=/(?<segment>.*), /$\{segment}
+            - name: CircuitBreaker
+              args:
+                name: fallbackEvent
+                fallbackUri: forward:/fallbackEventService
+        - id: commentService
+          uri: lb://COMMENT-SERVICE
+          predicates:
+            - Path=/comment/**
+          filters:
+            - RewritePath=/(?<segment>.*), /$\{segment}
+            - name: CircuitBreaker
+              args:
+                name: fallbackComment
+                fallbackUri: forward:/fallbackCommentService
+        - id: participantService
+          uri: lb://PARTICIPANT-SERVICE
+          predicates:
+            - Path=/participant/**
+          filters:
+            - RewritePath=/(?<segment>.*), /$\{segment}
+            - name: CircuitBreaker
+              args:
+                name: fallbackParticipant
+                fallbackUri: forward:/fallbackParticipantService
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8001/eureka/
+  instance:
+    preferIpAddress: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
