@@ -17,3 +17,5 @@ eureka:
   client:
     registerWithEureka: false
     fetchRegistry: false
+encrypt:
+  key: koiappconfigsecretkey
