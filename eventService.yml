@@ -17,7 +17,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8001/eureka/
+      defaultZone: http://grkem:1234@localhost:8001/eureka/
 event:
   lastUpdateDateline: 5
   eventSaveMinStar: 2.5
