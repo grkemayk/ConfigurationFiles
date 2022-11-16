@@ -19,4 +19,4 @@ eureka:
     serviceUrl:
       defaultZone: http://grkem:1234@localhost:8001/eureka/
 logging:
-  config: http://localhost:8000/native/native/main/LogConfiguration/authServerLogback.xml
+  config: http://localhost:8000/native/native/main/LogConfiguration/logback.xml
