@@ -1,0 +1,30 @@
+server:
+  port: 8601
+spring:
+  application:
+    name: EVENT-SERVICE
+  datasource:
+    username: postgres
+    url: jdbc:postgresql://localhost:5432/koi
+    password: Ga.4567.
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: none
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://grkem:1234@localhost:8001/eureka/
+event:
+  lastUpdateDateline: 5
+  eventSaveMinStar: 2.5
+
+
+
+
+
+
+

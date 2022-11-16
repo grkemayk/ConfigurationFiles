@@ -1,0 +1,16 @@
+server:
+  port: 8005
+spring:
+  application:
+    name: AUTH-FILTER
+  datasource:
+    username: postgres
+    url: jdbc:postgresql://localhost:5432/koi
+    password: Ga.4567.
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: none
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
