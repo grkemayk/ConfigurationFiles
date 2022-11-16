@@ -7,6 +7,10 @@ spring:
       kubernetes:
         reload:
           enabled: true
+  security:
+    user:
+      name: grkem
+      password: 1234
 eureka:
   client:
     registryFetchIntervalSeconds: 5
