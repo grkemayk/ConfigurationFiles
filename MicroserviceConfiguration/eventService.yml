@@ -20,6 +20,9 @@ eureka:
       defaultZone: http://grkem:1234@localhost:8001/eureka/
     healthcheck:
       enabled: true
+logging:
+  config: http://localhost:8000/native/native/main/LogConfiguration/EventServiceLogback.xml
+
 event:
   lastUpdateDateline: 5
   eventSaveMinStar: 2.5
