@@ -18,5 +18,7 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://grkem:1234@localhost:8001/eureka/
+  healthcheck:
+    enabled: true
   instance:
     hostname: localhost
