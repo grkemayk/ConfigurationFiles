@@ -20,7 +20,8 @@ eureka:
       defaultZone: http://grkem:1234@localhost:8001/eureka/
     healthcheck:
       enabled: true
-
+logging:
+  config: http://localhost:8000/native/native/main/LogConfiguration/UserDetailServiceLogback.xml
 userDetail:
   defaultStar: 2.5
 
