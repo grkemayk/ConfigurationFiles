@@ -22,3 +22,5 @@ eureka:
       enabled: true
   instance:
     hostname: localhost
+logging:
+  config: http://localhost:8000/native/native/main/LogConfiguration/AdminServerLogback.xml
