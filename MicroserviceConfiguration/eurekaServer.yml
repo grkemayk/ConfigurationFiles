@@ -17,3 +17,5 @@ eureka:
     fetchRegistry: false
 encrypt:
   key: koiappconfigsecretkey
+logging:
+  config: http://localhost:8000/native/native/main/LogConfiguration/EurakaServerLogback.xml
