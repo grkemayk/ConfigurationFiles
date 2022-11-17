@@ -20,7 +20,7 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://grkem:1234@localhost:8001/eureka/
-  healthcheck:
-    enabled: true
+    healthcheck:
+      enabled: true
 
 
