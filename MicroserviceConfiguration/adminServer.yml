@@ -11,6 +11,15 @@ spring:
     user:
       name: grkem
       password: 1234
+  boot:
+    admin:
+      client:
+        instance:
+          metadata:
+            user: 
+              name: grkem
+              password:1234
+
 eureka:
   client:
     registryFetchIntervalSeconds: 5
