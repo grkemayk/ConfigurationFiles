@@ -18,7 +18,7 @@ spring:
           metadata:
             user: 
               name: grkem
-              password:1234
+              password: 1234
 
 eureka:
   client:
