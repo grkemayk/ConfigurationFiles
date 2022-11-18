@@ -9,15 +9,15 @@ spring:
           enabled: true
   security:
     user:
-      name: grkem
-      password: 1234
+      name: ${adminServerUsername}
+      password: ${adminServerPassword}
 eureka:
   client:
     registryFetchIntervalSeconds: 5
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: http://${eurakaUser}:${eurakaPassword}@${eurakaIP}
+      defaultZone: http://${eurakaUsername}:${eurakaPassword}@${eurakaIP}
     healthcheck:
       enabled: true
   instance:
@@ -25,7 +25,9 @@ eureka:
 logging:
   config: ${logbackURL}
   
+adminServerUsername: grkem
+adminServerPassword: 1234
 logbackURL: http://localhost:8000/native/native/main/LogConfiguration/AdminServerLogback.xml
-eurakaUser: grkem
+eurakaUsername: grkem
 eurakaPassword: 1234
 eurakaIP: localhost:8001/eureka/
