@@ -19,7 +19,7 @@ spring:
   jpa:
     database: postgresql
     hibernate:
-      ddl-auto: none
+      ddl-auto: update
   mvc:
     pathmatch:
       matching-strategy: ant-path-matcher
@@ -33,6 +33,3 @@ logging:
   config: ${ParticipantServiceLogback.xml}
 participantService:
   lastRejectDateline: 5
-
-
-
