@@ -1,3 +1,8 @@
+logbackURL: http://localhost:8000/native/native/main/LogConfiguration/EurakaServerLogback.xml
+zipkinServerURL: http://localhost:9411
+
+server:
+  port: 8001
 spring:
   application:
     name: EUREKA-SERVER
@@ -6,9 +11,7 @@ spring:
       name: grkem
       password: 1234
   zipkin:
-    base-url: http://localhost:9411
-server:
-  port: 8001
+    base-url: ${zipkinServerURL}
 eureka:
   instance:
     hostname: localhost 
@@ -18,4 +21,5 @@ eureka:
 encrypt:
   key: koiappconfigsecretkey
 logging:
-  config: http://localhost:8000/native/native/main/LogConfiguration/EurakaServerLogback.xml
+  config: ${logbackURL}
+
