@@ -1,6 +1,11 @@
+logbackURL: http://localhost:8000/native/native/main/LogConfiguration/GatewayServerLogback.xml
+eurakaUsername: grkem
+eurakaPassword: 1234
+eurakaIP: localhost:8001/eureka/
+
+
 server:
   port: 8002
-
 spring:
   main:
     web-application-type: reactive
@@ -62,7 +67,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://grkem:1234@localhost:8001/eureka/
+      defaultZone: http://${eurakaUsername}:${eurakaPassword}@${eurakaIP}
     healthcheck:
       enabled: true
   instance:
@@ -73,4 +78,4 @@ management:
       exposure:
         include: "*"
 logging:
-  config: http://localhost:8000/native/native/main/LogConfiguration/GatewayServerLogback.xml
+  config: ${logbackURL}
