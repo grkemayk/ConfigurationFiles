@@ -1,3 +1,11 @@
+adminServerUsername: grkem
+adminServerPassword: 1234
+logbackURL: http://localhost:8000/native/native/main/LogConfiguration/AdminServerLogback.xml
+eurakaUsername: grkem
+eurakaPassword: 1234
+eurakaIP: localhost:8001/eureka/
+
+
 server:
   port: 8003
 spring:
@@ -24,10 +32,3 @@ eureka:
     hostname: localhost
 logging:
   config: ${logbackURL}
-  
-adminServerUsername: grkem
-adminServerPassword: 1234
-logbackURL: http://localhost:8000/native/native/main/LogConfiguration/AdminServerLogback.xml
-eurakaUsername: grkem
-eurakaPassword: 1234
-eurakaIP: localhost:8001/eureka/
