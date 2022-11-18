@@ -12,12 +12,14 @@ spring:
       name: grkem
       password: 1234
 eureka:
+  defaultUserName: grkem
+  defaultPassword: 1234
   client:
     registryFetchIntervalSeconds: 5
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: http://grkem:1234@localhost:8001/eureka/
+      defaultZone: http:/{defaultUserName}:{defaultPassword}@localhost:8001/eureka/
     healthcheck:
       enabled: true
   instance:
