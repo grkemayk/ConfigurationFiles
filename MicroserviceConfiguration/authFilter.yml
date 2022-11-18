@@ -4,9 +4,9 @@ spring:
   application:
     name: AUTH-FILTER
   datasource:
-    username: postgres
-    url: jdbc:postgresql://localhost:5432/koi
-    password: Ga.4567.
+    username: ${dataBaseUsername}
+    url: ${dataBaseURL}
+    password: ${dataBasePassword}
   jpa:
     database: postgresql
     hibernate:
@@ -14,3 +14,7 @@ spring:
   mvc:
     pathmatch:
       matching-strategy: ant-path-matcher
+      
+dataBaseURL: jdbc:postgresql://localhost:5432/koi
+dataBaseUsername: postgres
+dataBasePassword: Ga.4567.
