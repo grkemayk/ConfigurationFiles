@@ -12,17 +12,17 @@ spring:
       name: grkem
       password: 1234
 eureka:
-  defaultUserName: grkem
-  defaultPassword: 1234
   client:
     registryFetchIntervalSeconds: 5
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: http:/{eureka.defaultUserName}:{eureka.defaultPassword}@localhost:8001/eureka/
+      defaultZone: http:/{defaultUserName}:{defaultPassword}@localhost:8001/eureka/
     healthcheck:
       enabled: true
   instance:
     hostname: localhost
+defaultUserName: grkem
+defaultPassword: 1234
 logging:
   config: http://localhost:8000/native/native/main/LogConfiguration/AdminServerLogback.xml
