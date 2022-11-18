@@ -17,11 +17,10 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: http://{myuser}:1234@localhost:8001/eureka/
+      defaultZone: http://grkem:1234@localhost:8001/eureka/
     healthcheck:
       enabled: true
   instance:
     hostname: localhost
 logging:
   config: http://localhost:8000/native/native/main/LogConfiguration/AdminServerLogback.xml
-myuser: grkem
