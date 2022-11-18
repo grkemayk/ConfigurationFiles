@@ -4,9 +4,10 @@ spring:
   application:
     name: AUTH-SERVER
   datasource:
-    username: postgres
-    url: jdbc:postgresql://localhost:5432/koi
-    password: Ga.4567.
+    username: ${dataBaseUsername}
+    url: ${dataBaseURL}
+    password: ${dataBasePassword}
+
   jpa:
     database: postgresql
     hibernate:
@@ -17,8 +18,16 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://grkem:1234@localhost:8001/eureka/
+      defaultZone: http://${eurakaUsername}:${eurakaPassword}@${eurakaIP}
     healthcheck:
       enabled: true
 logging:
-  config: http://localhost:8000/native/native/main/LogConfiguration/AuthServerLogback.xml
+  config: ${logbackURL}
+  
+dataBaseURL: jdbc:postgresql://localhost:5432/koi
+dataBaseUsername: postgres
+dataBasePassword: Ga.4567.
+logbackURL: http://localhost:8000/native/native/main/LogConfiguration/AuthServerLogback.xml
+eurakaUsername: grkem
+eurakaPassword: 1234
+eurakaIP: localhost:8001/eureka/
