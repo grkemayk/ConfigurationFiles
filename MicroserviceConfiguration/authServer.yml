@@ -1,3 +1,12 @@
+dataBaseURL: jdbc:postgresql://localhost:5432/koi
+dataBaseUsername: postgres
+dataBasePassword: Ga.4567.
+logbackURL: http://localhost:8000/native/native/main/LogConfiguration/AuthServerLogback.xml
+eurakaUsername: grkem
+eurakaPassword: 1234
+eurakaIP: localhost:8001/eureka/
+
+
 server:
   port: 8004
 spring:
@@ -7,7 +16,6 @@ spring:
     username: ${dataBaseUsername}
     url: ${dataBaseURL}
     password: ${dataBasePassword}
-
   jpa:
     database: postgresql
     hibernate:
@@ -23,11 +31,3 @@ eureka:
       enabled: true
 logging:
   config: ${logbackURL}
-  
-dataBaseURL: jdbc:postgresql://localhost:5432/koi
-dataBaseUsername: postgres
-dataBasePassword: Ga.4567.
-logbackURL: http://localhost:8000/native/native/main/LogConfiguration/AuthServerLogback.xml
-eurakaUsername: grkem
-eurakaPassword: 1234
-eurakaIP: localhost:8001/eureka/
