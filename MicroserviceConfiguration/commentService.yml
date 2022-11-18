@@ -1,6 +1,14 @@
+dataBaseURL: jdbc:postgresql://localhost:5432/koi
+dataBaseUsername: postgres
+dataBasePassword: Ga.4567.
+logbackURL: http://localhost:8000/native/native/main/LogConfiguration/CommentServiceLogback.xml
+eurakaUsername: grkem
+eurakaPassword: 1234
+eurakaIP: localhost:8001/eureka/
+
+
 server:
   port: 8602
-
 spring:
   application:
     name: COMMENT-SERVICE
@@ -23,12 +31,3 @@ eureka:
       enabled: true
 logging:
   config: ${logbackURL} 
-
-dataBaseURL: jdbc:postgresql://localhost:5432/koi
-dataBaseUsername: postgres
-dataBasePassword: Ga.4567.
-logbackURL: http://localhost:8000/native/native/main/LogConfiguration/CommentServiceLogback.xml
-eurakaUsername: grkem
-eurakaPassword: 1234
-eurakaIP: localhost:8001/eureka/
-
