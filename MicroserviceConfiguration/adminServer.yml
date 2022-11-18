@@ -23,5 +23,6 @@ eureka:
   instance:
     hostname: localhost
 logging:
-  config: ${myurl}
-myurl: http://localhost:8000/native/native/main/LogConfiguration/AdminServerLogback.xml
+  config: ${logbackURL}
+  
+logbackURL: http://localhost:8000/native/native/main/LogConfiguration/AdminServerLogback.xml
