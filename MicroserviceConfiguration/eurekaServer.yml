@@ -15,9 +15,7 @@ spring:
     base-url: ${zipkinServerURL}
 eureka:
   server:
-    renewalPercentThreshold: 0.85
-  client:
-    registerWithEureka: true
+    getWaitTimeInMsWhenSyncEmpty: 2
 encrypt:
   key: koiappconfigsecretkey
 logging:
