@@ -28,7 +28,6 @@ spring:
       password: ${adminServerPassword}
 eureka:
   client:
-    registryFetchIntervalSeconds: 5
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
