@@ -32,6 +32,6 @@ eureka:
     healthcheck:
       enabled: true
 logging:
-  config: ${ParticipantServiceLogback.xml}
+  config: ${logbackURL}
 participantService:
   lastRejectDateline: 5
