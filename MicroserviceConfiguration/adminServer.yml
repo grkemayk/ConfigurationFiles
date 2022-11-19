@@ -37,7 +37,5 @@ eureka:
       enabled: true
   instance:
     hostname: ADMIN-SERVER
-    ipAddress: 192.168.1.109
-    preferIpAddress: true
 logging:
   config: ${logbackURL}
