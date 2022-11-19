@@ -38,6 +38,5 @@ eureka:
   instance:
     hostname: ADMIN-SERVER
     preferIpAddress: true
-    lease-renewal-interval-in-seconds: 30
 logging:
   config: ${logbackURL}
