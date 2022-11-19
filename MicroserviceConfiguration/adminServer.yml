@@ -15,10 +15,10 @@ spring:
       kubernetes:
         reload:
           enabled: true
-    inetutils:
-      ignoredInterfaces:
-        - docker0
-        - veth.*
+      inetutils:
+        ignoredInterfaces:
+          - docker0
+          - veth.*
   security:
     user:
       name: ${adminServerUsername}
