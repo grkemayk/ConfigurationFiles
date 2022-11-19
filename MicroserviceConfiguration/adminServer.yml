@@ -16,7 +16,12 @@ spring:
         reload:
           enabled: true
       inetutils:
-        useOnlySiteLocalInterfaces: true
+        ignoredInterfaces:
+          - docker0
+          - veth.*
+          - lo
+          - lo*
+          - eth0*
   security:
     user:
       name: ${adminServerUsername}
