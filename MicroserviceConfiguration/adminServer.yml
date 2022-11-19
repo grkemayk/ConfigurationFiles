@@ -29,10 +29,8 @@ spring:
 eureka:
   client:
     registryFetchIntervalSeconds: 5
-    registerWithEureka: false
+    registerWithEureka: true
     fetchRegistry: true
-    server:
-      waitTimeInMsWhenSyncEmpty: 0
     serviceUrl:
       defaultZone: http://${eurakaUsername}:${eurakaPassword}@${eurakaIP}
     healthcheck:
