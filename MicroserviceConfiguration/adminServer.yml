@@ -36,7 +36,7 @@ eureka:
     healthcheck:
       enabled: true
   instance:
-    hostname: asd
     preferIpAddress: true
+    hostname: asd
 logging:
   config: ${logbackURL}
