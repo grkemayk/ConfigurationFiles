@@ -66,12 +66,12 @@ spring:
                 fallbackUri: forward:/fallbackParticipantService
 eureka:
   client:
+    registerWithEureka: true
+    fetchRegistry: true
     serviceUrl:
       defaultZone: http://${eurakaUsername}:${eurakaPassword}@${eurakaIP}
     healthcheck:
       enabled: true
-  instance:
-    preferIpAddress: true
 management:
   endpoints:
     web:
