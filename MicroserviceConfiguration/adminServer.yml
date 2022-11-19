@@ -30,5 +30,6 @@ eureka:
       enabled: true
   instance:
     hostname: 192.168.1.109
+    preferIpAddress = true
 logging:
   config: ${logbackURL}
