@@ -14,6 +14,7 @@ spring:
   zipkin:
     base-url: ${zipkinServerURL}
 eureka:
+  renewalPercentThreshold: 0.85
   instance:
     hostname: 192.168.1.109
   client:
