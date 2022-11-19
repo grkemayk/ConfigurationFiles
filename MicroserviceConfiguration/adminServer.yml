@@ -1,9 +1,9 @@
 adminServerUsername: grkem
 adminServerPassword: 1234
-logbackURL: http://localhost:8000/native/native/main/LogConfiguration/AdminServerLogback.xml
+logbackURL: http://192.168.1.109:8000/native/native/main/LogConfiguration/AdminServerLogback.xml
 eurakaUsername: grkem
 eurakaPassword: 1234
-eurakaIP: localhost:8001/eureka/
+eurakaIP: 192.168.1.109:8001/eureka/
 
 
 server:
