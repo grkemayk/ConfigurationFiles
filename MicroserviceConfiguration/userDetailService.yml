@@ -34,4 +34,4 @@ eureka:
     healthcheck:
       enabled: true
 logging:
-  config: ${UserDetailServiceLogback.xml}
+  config: ${logbackURL}
