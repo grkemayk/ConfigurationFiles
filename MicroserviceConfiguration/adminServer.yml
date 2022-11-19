@@ -4,7 +4,6 @@ logbackURL: http://192.168.1.109:8000/native/native/main/LogConfiguration/AdminS
 eurakaUsername: grkem
 eurakaPassword: 1234
 eurakaIP: 192.168.1.109:8001/eureka/
-adminServerHost: 192.168.1.109
 
 
 server:
@@ -37,7 +36,7 @@ eureka:
     healthcheck:
       enabled: true
   instance:
-    hostname: ${adminServerHost}
+    hostname: asd
     preferIpAddress: true
 logging:
   config: ${logbackURL}
