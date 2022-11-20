@@ -13,9 +13,6 @@ spring:
       password: 1234
   zipkin:
     base-url: ${zipkinServerURL}
-eureka:
-  server:
-    getWaitTimeInMsWhenSyncEmpty: 2
 encrypt:
   key: koiappconfigsecretkey
 logging:
