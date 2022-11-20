@@ -14,9 +14,10 @@ spring:
   zipkin:
     base-url: ${zipkinServerURL}
 eureka:
+  instance:
+    hostname: localhost
   server:
     getWaitTimeInMsWhenSyncEmpty: 2
-    maxThreadsForPeerReplication: 0
   client:
     registerWithEureka: false
     fetchRegistry: false
