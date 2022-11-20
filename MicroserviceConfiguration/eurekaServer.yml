@@ -18,5 +18,4 @@ eureka:
     getWaitTimeInMsWhenSyncEmpty: 2
 encrypt:
   key: koiappconfigsecretkey
-logging:
-  config: ${logbackURL}
+
