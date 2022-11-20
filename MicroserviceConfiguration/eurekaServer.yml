@@ -14,8 +14,6 @@ spring:
   zipkin:
     base-url: ${zipkinServerURL}
 eureka:
-  server:
-    getWaitTimeInMsWhenSyncEmpty: 2
   client:
     registerWithEureka: false
     fetchRegistry: false
