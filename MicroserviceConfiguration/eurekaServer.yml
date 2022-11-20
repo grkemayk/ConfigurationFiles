@@ -16,6 +16,9 @@ spring:
 eureka:
   server:
     getWaitTimeInMsWhenSyncEmpty: 2
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
 encrypt:
   key: koiappconfigsecretkey
 logging:
