@@ -11,7 +11,7 @@ event:
   eventSaveMinStar: 2.5
   
 server:
-  port: 8601
+  port: 0
 spring:
   application:
     name: EVENT-SERVICE
