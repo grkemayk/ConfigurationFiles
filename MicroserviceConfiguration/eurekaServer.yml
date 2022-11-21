@@ -15,8 +15,8 @@ spring:
     base-url: ${zipkinServerURL}
 eureka:
   instance:
-      metadataMap:
-        instanceId: ${spring.application.name}:${server.port}
+    metadataMap:
+      instanceId: ${spring.application.name}:${server.port}
     hostname: localhost
     preferIpAddress: true
     healthCheckUrl: http://${eureka.instance.hostname}:${server.port}/actuator/health
