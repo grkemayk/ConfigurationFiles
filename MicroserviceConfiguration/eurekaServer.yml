@@ -27,7 +27,8 @@ eureka:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:8001
+      defaultZone: http://${eureka.instance.hostname}:8011
+      additionalZones: http://${eureka.instance.hostname}:8001
 encrypt:
   key: koiappconfigsecretkey
 logging:
