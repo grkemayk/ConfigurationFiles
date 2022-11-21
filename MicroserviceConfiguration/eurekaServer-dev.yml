@@ -7,8 +7,6 @@ server:
 spring:
   application:
     name: EUREKA-SERVER
-  profiles:
-    active: peer1
   security:
     user:
       name: grkem
