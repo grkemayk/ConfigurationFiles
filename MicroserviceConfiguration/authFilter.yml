@@ -1,4 +1,4 @@
-dataBaseURL: jdbc:postgresql://localhost:5432/koi
+dataBaseURL: jdbc:postgresql://localhost:543/koi
 dataBaseUsername: postgres
 dataBasePassword: Ga.4567.
 
