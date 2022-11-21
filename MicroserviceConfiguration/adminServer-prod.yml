@@ -1,0 +1,41 @@
+adminServerUsername: grkem
+adminServerPassword: 1234
+logbackURL: http://192.168.1.109:8000/native/native/main/LogConfiguration/AdminServerLogback.xml
+eurakaUsername: grkem
+eurakaPassword: 1234
+eurakaIP: 192.168.1.109:8001/eureka/
+
+
+server:
+  port: 8003
+spring:
+  application:
+    name: ADMIN-SERVER
+    cloud:
+      kubernetes:
+        reload:
+          enabled: true
+      inetutils:
+        ignoredInterfaces:
+          - docker0
+          - veth.*
+          - lo
+          - lo*
+          - eth0*
+  security:
+    user:
+      name: ${adminServerUsername}
+      password: ${adminServerPassword}
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://${eurakaUsername}:${eurakaPassword}@${eurakaIP}
+    healthcheck:
+      enabled: true
+  instance:
+    preferIpAddress: true
+    hostname: asd
+logging:
+  config: ${logbackURL}
