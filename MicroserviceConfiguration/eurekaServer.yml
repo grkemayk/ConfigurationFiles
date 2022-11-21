@@ -5,7 +5,6 @@ zipkinServerURL: http://localhost:9411
 server:
   port: 8001
 spring:
-  profiles: peer1
   application:
     name: EUREKA-SERVER
   security:
