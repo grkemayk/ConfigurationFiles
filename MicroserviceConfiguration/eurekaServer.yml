@@ -5,6 +5,7 @@ zipkinServerURL: http://localhost:9411
 server:
   port: 8001
 spring:
+  profiles: peer1
   application:
     name: EUREKA-SERVER
   security:
@@ -15,9 +16,7 @@ spring:
     base-url: ${zipkinServerURL}
 eureka:
   instance:
-    metadataMap:
-      instanceId: ${spring.application.name}:${server.port}
-    hostname: localhost
+    hostname: peer1
     preferIpAddress: true
     healthCheckUrl: http://${eureka.instance.hostname}:${server.port}/actuator/health
     homePageUrl: http://${eureka.instance.hostname}:${server.port}
@@ -27,8 +26,7 @@ eureka:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:8011
-      additionalZones: http://${eureka.instance.hostname}:8001
+      defaultZone: https://peer2
 encrypt:
   key: koiappconfigsecretkey
 logging:
