@@ -3,7 +3,7 @@ zipkinServerURL: http://192.168.1.109:9411
 
 
 server:
-  port: 8001
+  port: 8011
 spring:
   application:
     name: EUREKA-SERVER
@@ -25,7 +25,7 @@ eureka:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://192.168.1.109:8011
+      defaultZone: http://localhost:8001
 encrypt:
   key: koiappconfigsecretkey
 logging:
