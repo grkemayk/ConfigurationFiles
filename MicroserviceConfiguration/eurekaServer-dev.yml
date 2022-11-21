@@ -21,6 +21,7 @@ eureka:
     homePageUrl: http://${eureka.instance.hostname}:${server.port}
   server:
     getWaitTimeInMsWhenSyncEmpty: 2
+    enableSelfPreservation: false
   client:
     registerWithEureka: false
     fetchRegistry: false
