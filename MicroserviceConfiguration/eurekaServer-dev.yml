@@ -3,7 +3,7 @@ zipkinServerURL: http://localhost:9411
 
 
 server:
-  port: 8001
+  port: 8011
 spring:
   application:
     name: EUREKA-SERVER
@@ -15,7 +15,7 @@ spring:
     base-url: ${zipkinServerURL}
 eureka:
   instance:
-    hostname: localhost
+    hostname: myDomain
     preferIpAddress: true
     healthCheckUrl: http://${eureka.instance.hostname}:${server.port}/actuator/health
     homePageUrl: http://${eureka.instance.hostname}:${server.port}
@@ -25,7 +25,7 @@ eureka:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://grkem:1234@myDomain:8011
+      defaultZone: http://grkem:1234@localhost:8001
 encrypt:
   key: koiappconfigsecretkey
 logging:
