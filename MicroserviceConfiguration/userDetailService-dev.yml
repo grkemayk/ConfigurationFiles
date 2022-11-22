@@ -27,7 +27,6 @@ spring:
       matching-strategy: ant-path-matcher
 eureka:
   instance:
-    leaseRenewalIntervalInSeconds: 10
     leaseExpirationDurationInSeconds: 2
   client:
     registerWithEureka: true
