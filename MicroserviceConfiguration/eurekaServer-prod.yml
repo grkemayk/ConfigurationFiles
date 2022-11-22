@@ -22,6 +22,7 @@ eureka:
     healthCheckUrl: http://${eureka.instance.hostname}:${server.port}/actuator/health
     homePageUrl: http://${eureka.instance.hostname}:${server.port}
   server:
+    enableSelfPreservation: false
     getWaitTimeInMsWhenSyncEmpty: 2
   client:
     registerWithEureka: false
