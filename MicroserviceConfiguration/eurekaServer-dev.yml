@@ -27,7 +27,7 @@ eureka:
     region: region-1
     service-url:
       zone1: http://grkem:1234@localhost:8001/eureka/
-      zone2: http://grkem:1234@myDomain:8001/eureka/
+      zone2: http://grkem:1234@myDomain:8011/eureka/
     availability-zones:
       region-1: zone1,zone2
 encrypt:
