@@ -22,7 +22,7 @@ eureka:
   server:
     getWaitTimeInMsWhenSyncEmpty: 2
   client:
-    registerWithEureka: false
+    registerWithEureka: true
     fetchRegistry: false
     serviceUrl:
       defaultZone: http://grkem:1234@myDomain:8011/eureka
