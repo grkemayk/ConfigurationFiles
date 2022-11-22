@@ -15,6 +15,7 @@ spring:
     base-url: ${zipkinServerURL}
 eureka:
   renewalPercentThreshold: 0.85
+  enableSelfPreservation: false
   instance:
     hostname: myDomain
     preferIpAddress: true
