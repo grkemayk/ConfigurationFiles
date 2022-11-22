@@ -4,6 +4,11 @@ zipkinServerURL: http://localhost:9411
 
 server:
   port: 8001
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
 spring:
   application:
     name: EUREKA-SERVER
