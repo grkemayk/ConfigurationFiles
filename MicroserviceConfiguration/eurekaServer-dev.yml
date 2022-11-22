@@ -20,6 +20,7 @@ spring:
     base-url: ${zipkinServerURL}
 eureka:
   instance:
+    environment: dev 
     hostname: myDomain
     preferIpAddress: true
     healthCheckUrl: http://${eureka.instance.hostname}:${server.port}/actuator/health
