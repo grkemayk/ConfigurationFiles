@@ -25,7 +25,7 @@ eureka:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://myDomain:8011
+      defaultZone: http://grkem:1234@myDomain:8011
 encrypt:
   key: koiappconfigsecretkey
 logging:
