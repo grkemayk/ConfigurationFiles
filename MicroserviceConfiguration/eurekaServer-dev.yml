@@ -20,7 +20,6 @@ eureka:
     healthCheckUrl: http://${eureka.instance.hostname}:${server.port}/actuator/health
     homePageUrl: http://${eureka.instance.hostname}:${server.port}
   server:
-    eviction-interval-timer-in-ms: 1000
     getWaitTimeInMsWhenSyncEmpty: 2
   client:
     registerWithEureka: false
