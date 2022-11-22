@@ -1,5 +1,5 @@
-logbackURL: http://192.168.1.109:8000/native/native/main/LogConfiguration/EurakaServerLogback.xml
-zipkinServerURL: http://192.168.1.109:9411
+logbackURL: http://localhost:8000/native/native/main/LogConfiguration/EurakaServerLogback.xml
+zipkinServerURL: http://localhost:9411
 
 
 server:
@@ -14,8 +14,9 @@ spring:
   zipkin:
     base-url: ${zipkinServerURL}
 eureka:
+  renewalPercentThreshold: 0.85
   instance:
-    hostname: 192.168.1.109
+    hostname: myDomain
     preferIpAddress: true
     healthCheckUrl: http://${eureka.instance.hostname}:${server.port}/actuator/health
     homePageUrl: http://${eureka.instance.hostname}:${server.port}
@@ -25,9 +26,8 @@ eureka:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://localhost:8001
+      defaultZone: http://grkem:1234@localhost:8001/eureka
 encrypt:
   key: koiappconfigsecretkey
 logging:
   config: ${logbackURL}
-
