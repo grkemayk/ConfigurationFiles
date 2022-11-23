@@ -28,7 +28,7 @@ spring:
       password: ${adminServerPassword}
 eureka:
   client:
-    registerWithEureka: true
+    registerWithEureka: false
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://${eurakaUsername}:${eurakaPassword}@${eurakaIP}
