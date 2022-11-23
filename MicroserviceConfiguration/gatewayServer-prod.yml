@@ -66,9 +66,9 @@ spring:
                 fallbackUri: forward:/fallbackParticipantService
 eureka:
   client:
-    registryFetchIntervalSeconds: 5
     registerWithEureka: true
     fetchRegistry: true
+    registryFetchIntervalSeconds: 5
     serviceUrl:
       defaultZone: http://${eurakaUsername}:${eurakaPassword}@${eurakaIP}
     healthcheck:
