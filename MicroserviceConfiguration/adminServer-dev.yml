@@ -15,20 +15,13 @@ spring:
       kubernetes:
         reload:
           enabled: true
-      inetutils:
-        ignoredInterfaces:
-          - docker0
-          - veth.*
-          - lo
-          - lo*
-          - eth0*
   security:
     user:
       name: ${adminServerUsername}
       password: ${adminServerPassword}
 eureka:
   client:
-    registerWithEureka: false
+    registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://${eurakaUsername}:${eurakaPassword}@${eurakaIP}
