@@ -15,13 +15,6 @@ spring:
       kubernetes:
         reload:
           enabled: true
-      inetutils:
-        ignoredInterfaces:
-          - docker0
-          - veth.*
-          - lo
-          - lo*
-          - eth0*
   security:
     user:
       name: ${adminServerUsername}
@@ -30,6 +23,7 @@ eureka:
   client:
     registerWithEureka: true
     fetchRegistry: true
+    registryFetchIntervalSeconds: 5
     serviceUrl:
       defaultZone: http://${eurakaUsername}:${eurakaPassword}@${eurakaIP}
     healthcheck:
