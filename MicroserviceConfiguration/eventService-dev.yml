@@ -12,6 +12,8 @@ event:
   
 server:
   port: 8601
+  servlet:
+    context-path: /event
 spring:
   application:
     name: EVENT-SERVICE
