@@ -9,6 +9,8 @@ eurakaIP: localhost:8001/eureka/
 
 server:
   port: 8602
+  servlet:
+    context-path: /comment
 spring:
   application:
     name: COMMENT-SERVICE
