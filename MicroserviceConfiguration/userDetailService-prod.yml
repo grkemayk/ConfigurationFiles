@@ -11,8 +11,6 @@ userDetail:
 
 server:
   port: 8600
-  servlet:
-    context-path: /userDetail
 spring:
   application:
     name: USER-DETAIL
