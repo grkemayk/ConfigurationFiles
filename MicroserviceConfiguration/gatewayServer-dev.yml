@@ -11,6 +11,17 @@ spring:
     web-application-type: reactive
   application:
     name: GATEWAY-SERVER
+  datasource:   
+    username: ${dataBaseUsername}
+    url: ${dataBaseURL}
+    password: ${dataBasePassword}
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: none
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
   cloud:
     gateway:
       routes:
