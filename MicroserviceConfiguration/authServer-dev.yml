@@ -8,7 +8,7 @@ eurakaIP: localhost:8001/eureka/
 
 
 server:
-  port: 8004
+  port: 8014
 spring:
   application:
     name: AUTH-SERVER
