@@ -9,8 +9,6 @@ eurakaIP: localhost:8001/eureka/
 
 server:
   port: 8603
-  servlet:
-    context-path: /participant
 spring:
   application:
     name: PARTICIPANT-SERVICE
