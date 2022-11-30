@@ -34,5 +34,4 @@ eureka:
       defaultZone: http://${eurakaUsername}:${eurakaPassword}@${eurakaIP}
     healthcheck:
       enabled: true
-logging:
-  config: ${logbackURL}
+
