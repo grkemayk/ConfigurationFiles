@@ -13,6 +13,9 @@ spring:
     name: GATEWAY-SERVER
   cloud:
     gateway:
+      httpclient:
+        connect-timeout: 1000
+        response-timeout: 5s
       routes:
         - id: authServer
           uri: lb://AUTH-SERVER
