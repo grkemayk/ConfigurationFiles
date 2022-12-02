@@ -5,7 +5,7 @@ logbackURL: http://localhost:8000/native/native/main/LogConfiguration/AuthServer
 eurakaUsername: grkem
 eurakaPassword: 1234
 eurakaIP: localhost:8001/eureka/
-
+resetPasswordTokenExpriationMinute: 2
 
 server:
   port: 8004
