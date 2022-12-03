@@ -13,17 +13,6 @@ server:
 spring:
   application:
     name: AUTH-SERVER
-  mail:
-    properties:
-      mail:
-        smtp:
-          starttls:
-            enable: 'true'
-          auth: 'true'
-    host: smtp.gmail.com
-    username: grkemaykackoi@gmail.com
-    password: jpuahdpcwlzxylju
-    port: '587'
   datasource:
     username: ${dataBaseUsername}
     url: ${dataBaseURL}
