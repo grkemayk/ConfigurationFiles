@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <property name="LOG_BASE" value="logs/AuthService"/>
-    <appender name="ELASTIC" class="com.example.demo.ElasticSearchAppender" />
+    <appender name="esearch" class="com.example.demo.ElasticSearchAppender" />
     <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
         <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
             <charset>UTF-8</charset>
@@ -75,7 +75,7 @@
         </encoder>
     </appender>
     <root level="INFO">
-        <appender-ref ref="ELASTIC"/>
+        <appender-ref ref="esearch"/>
         <appender-ref ref="infoFile"/>
         <appender-ref ref="warnFile"/>
         <appender-ref ref="errorFile"/>
