@@ -9,7 +9,7 @@ resetPasswordTokenExpriationMinute: 2
 
 
 server:
-  port: 8004
+  port: 8014
 spring:
   application:
     name: AUTH-SERVER
