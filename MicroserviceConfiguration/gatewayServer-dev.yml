@@ -75,7 +75,7 @@ spring:
             - Path=/participant/**
           metadata:
             response-timeout: 10000
-            connect-timeout: 2000
+            connect-timeout: 20000
           filters:
             - RewritePath=/(?<segment>.*), /$\{segment}
             - name: CircuitBreaker
