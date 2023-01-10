@@ -13,17 +13,11 @@ spring:
     name: GATEWAY-SERVER
   cloud:
     gateway:
-      httpclient:
-        connect-timeout: 5000
-        response-timeout: 5000
       routes:
         - id: authServer
           uri: lb://AUTH-SERVER
           predicates:
             - Path=/auth/**
-          metadata:
-            response-timeout: 10000
-            connect-timeout: 2000
           filters:
             - RewritePath=/(?<segment>.*), /$\{segment}
             - name: CircuitBreaker
@@ -34,9 +28,6 @@ spring:
           uri: lb://USER-DETAIL
           predicates:
             - Path=/userDetail/**
-          metadata:
-            response-timeout: 10000
-            connect-timeout: 2000
           filters:
             - RewritePath=/(?<segment>.*), /$\{segment}
             - name: CircuitBreaker
@@ -47,9 +38,6 @@ spring:
           uri: lb://EVENT-SERVICE
           predicates:
             - Path=/event/**
-          metadata:
-            response-timeout: 10000
-            connect-timeout: 2000
           filters:
             - RewritePath=/(?<segment>.*), /$\{segment}
             - name: CircuitBreaker
@@ -60,9 +48,6 @@ spring:
           uri: lb://COMMENT-SERVICE
           predicates:
             - Path=/comment/**
-          metadata:
-            response-timeout: 10000
-            connect-timeout: 2000
           filters:
             - RewritePath=/(?<segment>.*), /$\{segment}
             - name: CircuitBreaker
@@ -73,9 +58,6 @@ spring:
           uri: lb://PARTICIPANT-SERVICE
           predicates:
             - Path=/participant/**
-          metadata:
-            response-timeout: 10000
-            connect-timeout: 20000
           filters:
             - RewritePath=/(?<segment>.*), /$\{segment}
             - name: CircuitBreaker
