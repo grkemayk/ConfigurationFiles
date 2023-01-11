@@ -127,7 +127,7 @@ resilience4j:
       fallbackAuth:
         timeoutDuration: 20s #Request kaç saniye sonra time-out olacak bilgisi girilir. İlgili request time-out'tan sonra fallback'e düşecektir.
       fallbackUser:
-        timeoutDuration: 20s
+        timeoutDuration: 1s
       fallbackEvent:
         timeoutDuration: 20s
       fallbackComment:
