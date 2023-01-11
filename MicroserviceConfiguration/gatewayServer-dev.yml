@@ -85,7 +85,7 @@ resilience4j:
         permittedNumberOfCallsInHalfOpenState: 5
         automaticTransitionFromOpenToHalfOpenEnabled: true
         failureRateThreshold: 50
-        waitDurationInOpenState: 50s
+        waitDurationInOpenState: 10s
         slowCallDurationThreshold: 30s
         slowCallRateThreshold: 90
         registerHealthIndicator: true
