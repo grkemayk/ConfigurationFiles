@@ -102,7 +102,7 @@ resilience4j:
       fallbackAuth:
         timeoutDuration: 2s
       fallbackUser:
-        timeoutDuration: 2s
+        timeoutDuration: 10s
       fallbackEvent:
         timeoutDuration: 2s
       fallbackComment:
