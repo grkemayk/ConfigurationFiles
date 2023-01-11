@@ -68,7 +68,7 @@ resilience4j:
   circuitbreaker:
     instances:
       fallbackAuth:
-        slidingWindowType: COUNT_BASE
+        slidingWindowType: COUNT_BASED
         slidingWindowSize: 10
         minimumNumberOfCalls: 5
         permittedNumberOfCallsInHalfOpenState: 5
@@ -77,7 +77,7 @@ resilience4j:
         waitDurationInOpenState: 50s
         registerHealthIndicator: true
       fallbackUser:
-        slidingWindowType: COUNT_BASE
+        slidingWindowType: COUNT_BASED
         slidingWindowSize: 10
         minimumNumberOfCalls: 5
         permittedNumberOfCallsInHalfOpenState: 5
@@ -86,7 +86,7 @@ resilience4j:
         waitDurationInOpenState: 50s
         registerHealthIndicator: true
       fallbackEvent:
-        slidingWindowType: COUNT_BASE
+        slidingWindowType: COUNT_BASED
         slidingWindowSize: 10
         minimumNumberOfCalls: 5
         permittedNumberOfCallsInHalfOpenState: 5
@@ -95,7 +95,7 @@ resilience4j:
         waitDurationInOpenState: 50s
         registerHealthIndicator: true
       fallbackComment:
-        slidingWindowType: COUNT_BASE
+        slidingWindowType: COUNT_BASED
         slidingWindowSize: 10
         minimumNumberOfCalls: 5
         permittedNumberOfCallsInHalfOpenState: 5
@@ -104,7 +104,7 @@ resilience4j:
         waitDurationInOpenState: 50s
         registerHealthIndicator: true
       fallbackParticipant:
-        slidingWindowType: COUNT_BASE
+        slidingWindowType: COUNT_BASED
         slidingWindowSize: 10
         minimumNumberOfCalls: 5
         permittedNumberOfCallsInHalfOpenState: 5
