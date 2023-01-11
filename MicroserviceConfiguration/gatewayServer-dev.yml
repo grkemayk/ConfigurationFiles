@@ -68,13 +68,15 @@ resilience4j:
   circuitbreaker:
     instances:
       fallbackAuth:
-        slidingWindowType: COUNT_BASED
-        slidingWindowSize: 10
-        minimumNumberOfCalls: 5
-        permittedNumberOfCallsInHalfOpenState: 5
-        automaticTransitionFromOpenToHalfOpenEnabled: true
-        failureRateThreshold: 50
-        waitDurationInOpenState: 50s
+        slidingWindowType: COUNT_BASED #Kayıt altına alınan data kıstası. Saniye olarakta belirlenebilmektedir.
+        slidingWindowSize: 10 #Son 10 datanın dikkate alınmasını sağlar.
+        minimumNumberOfCalls: 5 #Asgari kayıt sayısını belirler. Bu kayıt sayısından sonra algoritmalar çalışacaktır.
+        permittedNumberOfCallsInHalfOpenState: 5 #Sigora yarı açıkken yapılacak max kayıt sayısı.
+        automaticTransitionFromOpenToHalfOpenEnabled: true #Sigortanın açık konumdan yarı-açık konuma gelmesini üsrecinin atomatize edilmesi sağlar.
+        failureRateThreshold: 50 #% cinsinden ne kadar bir fail oranı olursa sigorta açık konuma gelecek bilgisi girilir.
+        waitDurationInOpenState: 50s #Açık olan devre 50s sonra yarı açık hal gelecektir.
+        slowCallDurationThreshold: 30s #30s üzerinde dönen request'leri yavaş olarak kabul edecektir.
+        slowCallRateThreshold: 90 #Yavaş request sayısı %90'ı aşarsa sigorta yarı-açık konuma gelecektir.
         registerHealthIndicator: true
       fallbackUser:
         slidingWindowType: COUNT_BASED
@@ -84,6 +86,8 @@ resilience4j:
         automaticTransitionFromOpenToHalfOpenEnabled: true
         failureRateThreshold: 50
         waitDurationInOpenState: 50s
+        slowCallDurationThreshold: 30s
+        slowCallRateThreshold: 90
         registerHealthIndicator: true
       fallbackEvent:
         slidingWindowType: COUNT_BASED
@@ -93,6 +97,8 @@ resilience4j:
         automaticTransitionFromOpenToHalfOpenEnabled: true
         failureRateThreshold: 50
         waitDurationInOpenState: 50s
+        slowCallDurationThreshold: 30s
+        slowCallRateThreshold: 90
         registerHealthIndicator: true
       fallbackComment:
         slidingWindowType: COUNT_BASED
@@ -102,6 +108,8 @@ resilience4j:
         automaticTransitionFromOpenToHalfOpenEnabled: true
         failureRateThreshold: 50
         waitDurationInOpenState: 50s
+        slowCallDurationThreshold: 30s
+        slowCallRateThreshold: 90
         registerHealthIndicator: true
       fallbackParticipant:
         slidingWindowType: COUNT_BASED
@@ -111,6 +119,8 @@ resilience4j:
         automaticTransitionFromOpenToHalfOpenEnabled: true
         failureRateThreshold: 50
         waitDurationInOpenState: 50s
+        slowCallDurationThreshold: 30s
+        slowCallRateThreshold: 90
         registerHealthIndicator: true
   timelimiter:
     instances:
