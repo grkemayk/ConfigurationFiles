@@ -125,7 +125,7 @@ resilience4j:
   timelimiter:
     instances:
       fallbackAuth:
-        timeoutDuration: 2s
+        timeoutDuration: 2s #Request kaç saniye sonra time-out olacak bilgisi girilir. İlgili request time-out'tan sonra fallback'e düşecektir.
       fallbackUser:
         timeoutDuration: 2s
       fallbackEvent:
