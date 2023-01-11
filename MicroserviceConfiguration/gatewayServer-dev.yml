@@ -68,41 +68,56 @@ resilience4j:
   circuitbreaker:
     instances:
       fallbackAuth:
+        slidingWindowType: COUNT_BASE
         slidingWindowSize: 10
+        minimumNumberOfCalls: 5
         permittedNumberOfCallsInHalfOpenState: 5
+        automaticTransitionFromOpenToHalfOpenEnabled: true
         failureRateThreshold: 50
-        waitDurationInOpenState: 10000
+        waitDurationInOpenState: 50s
         registerHealthIndicator: true
       fallbackUser:
+        slidingWindowType: COUNT_BASE
         slidingWindowSize: 10
+        minimumNumberOfCalls: 5
         permittedNumberOfCallsInHalfOpenState: 5
+        automaticTransitionFromOpenToHalfOpenEnabled: true
         failureRateThreshold: 50
-        waitDurationInOpenState: 10000
+        waitDurationInOpenState: 50s
         registerHealthIndicator: true
       fallbackEvent:
+        slidingWindowType: COUNT_BASE
         slidingWindowSize: 10
+        minimumNumberOfCalls: 5
         permittedNumberOfCallsInHalfOpenState: 5
+        automaticTransitionFromOpenToHalfOpenEnabled: true
         failureRateThreshold: 50
-        waitDurationInOpenState: 10000
+        waitDurationInOpenState: 50s
         registerHealthIndicator: true
       fallbackComment:
+        slidingWindowType: COUNT_BASE
         slidingWindowSize: 10
+        minimumNumberOfCalls: 5
         permittedNumberOfCallsInHalfOpenState: 5
+        automaticTransitionFromOpenToHalfOpenEnabled: true
         failureRateThreshold: 50
-        waitDurationInOpenState: 10000
+        waitDurationInOpenState: 50s
         registerHealthIndicator: true
       fallbackParticipant:
+        slidingWindowType: COUNT_BASE
         slidingWindowSize: 10
+        minimumNumberOfCalls: 5
         permittedNumberOfCallsInHalfOpenState: 5
+        automaticTransitionFromOpenToHalfOpenEnabled: true
         failureRateThreshold: 50
-        waitDurationInOpenState: 10000
+        waitDurationInOpenState: 50s
         registerHealthIndicator: true
   timelimiter:
     instances:
       fallbackAuth:
         timeoutDuration: 2s
       fallbackUser:
-        timeoutDuration: 10s
+        timeoutDuration: 2s
       fallbackEvent:
         timeoutDuration: 2s
       fallbackComment:
