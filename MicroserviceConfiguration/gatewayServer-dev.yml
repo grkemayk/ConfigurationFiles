@@ -2,7 +2,6 @@ logbackURL: http://localhost:8000/native/native/main/LogConfiguration/GatewaySer
 eurakaUsername: grkem
 eurakaPassword: 1234
 eurakaIP: localhost:8001/eureka/
-zipkinServerURL: http://localhost:9411
 
 
 server:
@@ -12,8 +11,6 @@ spring:
     web-application-type: reactive
   application:
     name: GATEWAY-SERVER
-  zipkin:
-    base-url: ${zipkinServerURL}
   cloud:
     gateway:
       routes:
