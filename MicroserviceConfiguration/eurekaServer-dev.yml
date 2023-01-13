@@ -11,8 +11,6 @@ spring:
     user:
       name: grkem
       password: 1234
-  zipkin:
-    base-url: ${zipkinServerURL}
 eureka:
   instance:
     hostname: localhost
