@@ -35,8 +35,3 @@ logging:
   config: ${logbackURL}
 participantService:
   lastRejectDateline: 5
-feign:
-  compression:
-    response:
-      enabled: true
-      useGzipDecoder: true
