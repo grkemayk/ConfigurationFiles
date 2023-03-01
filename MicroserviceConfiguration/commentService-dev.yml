@@ -33,3 +33,8 @@ eureka:
       enabled: true
 logging:
   config: ${logbackURL} 
+feign:
+  compression:
+    response:
+      enabled: true
+      useGzipDecoder: true
