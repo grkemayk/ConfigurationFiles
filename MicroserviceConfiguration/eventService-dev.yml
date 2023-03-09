@@ -23,7 +23,6 @@ spring:
     database: postgresql
     hibernate:
       ddl-auto: update
-      hbm2ddl: update
   mvc:
     pathmatch:
       matching-strategy: ant-path-matcher
