@@ -1,10 +1,10 @@
-dataBaseURL: jdbc:postgresql://192.168.1.109:5432/koi
+dataBaseURL: jdbc:postgresql://localhost:5432/koi
 dataBaseUsername: postgres
 dataBasePassword: Ga.4567.
-logbackURL: http://192.168.1.109:8000/native/native/main/LogConfiguration/AuthServerLogback.xml
+logbackURL: http://localhost:8000/native/native/main/LogConfiguration/AuthServerLogback.xml
 eurakaUsername: grkem
 eurakaPassword: 1234
-eurakaIP: 192.168.1.109:8001/eureka/
+eurakaIP: localhost:8001/eureka/
 resetPasswordTokenExpriationMinute: 2
 
 
