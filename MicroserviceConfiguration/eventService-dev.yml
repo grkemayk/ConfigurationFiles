@@ -22,7 +22,7 @@ spring:
   jpa:
     database: postgresql
     hibernate:
-      ddl-auto: none
+      ddl-auto: auto
   mvc:
     pathmatch:
       matching-strategy: ant-path-matcher
