@@ -20,8 +20,9 @@ spring:
     url: ${dataBaseURL}
     password: ${dataBasePassword}
   jpa:
-    database: postgresql
+    database-platform: org.hibernate.spatial.dialect.postgis.PostgisDialect
     hibernate:
+       database: postgresql
       ddl-auto: update
   mvc:
     pathmatch:
