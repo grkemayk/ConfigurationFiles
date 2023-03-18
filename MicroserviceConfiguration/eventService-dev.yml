@@ -24,7 +24,7 @@ spring:
     hibernate:
       dialect: org.hibernate.spatial.dialect.postgis.PostgisDialect
       database: postgresql
-      ddl-auto: update
+      ddl-auto: none
   mvc:
     pathmatch:
       matching-strategy: ant-path-matcher
